@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { environment as env } from './../environments/environment';
 
 export interface MarkerPosition {
   id: string;
@@ -17,17 +19,11 @@ export interface PlaceReview {
 })
 export class MapService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getMarkerPositions(): Observable<MarkerPosition[]> {
-    return of([{
-      id: '1',
-      position: { lat: 35.65809630288114, lng: 139.74755961751293 }
-    },
-    {
-      id: '2',
-      position: { lat: 35.6956851121099, lng: 139.476334641927 }
-    }]);
+  // TODO: set range for marker
+  getMarkerPositions(): Observable<{ data: MarkerPosition[] }> {
+    return this.http.get<{ data: MarkerPosition[] }>(`${env.hostUrl}/markerPositions`);
   }
 
   getReviews(id: string): Observable<PlaceReview[]> {

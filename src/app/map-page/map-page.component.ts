@@ -28,7 +28,7 @@ export class MapPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.service.getMarkerPositions().pipe(first()).subscribe(pos => {
-      this.markerPositions = pos;
+      this.markerPositions = pos.data;
     });
   }
 
