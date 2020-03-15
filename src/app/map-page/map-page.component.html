@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <span>sk8ter map</span>
+</mat-toolbar>
+
+<google-map height="90vh" width="100vw" [center]="center" [zoom]="zoom" (mapClick)="addMarker($event)"
+  (mapMousemove)="move($event)" (mapRightclick)="removeLastMarker()">
+  <map-marker #marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition.position"
+    [options]="markerOptions" (mapClick)="openInfoWindow(markerPosition, marker)"></map-marker>
+  <map-marker #toBeAdded [position]="toBeAddedPosition" [options]="markerOptions" (mapClick)="promoteAddReview()">
+  </map-marker>
+  <map-info-window>
+    <div *ngIf="reviews">
+      <button mat-mini-fab color="primary" aria-label="button to add review" (click)="addReview()">
+        <mat-icon>add_comment</mat-icon>
+      </button>
+      <ng-container *ngFor="let rev of reviews">
+        {{rev.comment}}
+      </ng-container>
+    </div>
+    <div *ngIf="!reviews">
+      <div>Add review to register new spot!</div>
+      <mat-form-field class="example-full-width">
+        <mat-label>Review Comment</mat-label>
+        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="registerNewMarker()">REGISTER</button>
+    </div>
+  </map-info-window>
+</google-map>
