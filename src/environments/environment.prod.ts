@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  hostUrl: 'https://sk8ter-map.appspot.com'
+  hostUrl: 'https://cloudsql-dot-sk8ter-map.appspot.com'
 };
