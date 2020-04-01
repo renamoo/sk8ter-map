@@ -1,62 +1,17 @@
-# New Project Template
+# Sk8er-Map
 
-This repository contains a template that can be used to seed a repository for a
-new Google open source project.
+This project is a mock web service to show reviews for skater spots on the map. It is developed to try using GoogleCloud's Cloud Spanner and CloudSQL, and newly added Angular material's map component.
+Master branch uses Spanner and cloudsql branch uses CloudSQL.
 
-See [go/releasing](http://go/releasing) (available externally at
-https://opensource.google/docs/releasing/) for more information about
-releasing a new Google open source project.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+
+# Project Template used for it
 
 This template uses the Apache license, as is Google's default.  See the
 documentation for instructions on using alternate license.
-
-## Source Code Headers
-
-Every file containing source code must include copyright and license
-information. This includes any JS/CSS files that you might be serving out to
-browsers. (This is to help well-intentioned people avoid accidental copying that
-doesn't comply with the license.)
-
-Apache header:
-
-    Copyright 2020 Google LLC
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-        https://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
-# Sk8erMap
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+**This is not an officially supported Google product.**
